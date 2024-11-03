@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Create Your Greeting Card</h1>
+    </nav>
+    <div class="container">
+        <div class="card-options">
+            <input type="text" id="name" placeholder="Recipient's Name">
+            <input type="color" id="bgColor" title="Choose Background Color">
+            <select id="occasion">
+                <option value="Happy Birthday!">Birthday</option>
+                <option value="Merry Christmas!">Christmas</option>
+                <option value="Happy New Year!">New Year</option>
+                <option value="Happy Diwali!">Diwali</option>
+                <option value="Happy Eid!">Eid</option>
+            </select>
+            <input type="file" id="bgImage" accept="image/*" title="Upload Background Image">
+            <button onclick="generateCard()">Generate Card</button>
+            <button onclick="downloadCard()">Download Card</button>
+        </div>
+
+        <div class="card-preview">
+            <div id="greetingCard" class="card">
+                <div class="card-image" id="cardImage"></div>
+                <div class="card-text">
+                    <h2 id="greetingText">Greeting Message</h2>
+                    <p id="recipientName">To: [Name]</p>
+                    <p id="customMessage">Your customized greeting message goes here!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Made by Ankur Soni</p>
+        <a href="https://www.instagram.com/ankur.soni20/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/ankur-soni-blogger/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon">
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
